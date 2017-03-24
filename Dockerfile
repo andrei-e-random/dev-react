@@ -18,4 +18,7 @@ RUN    set -x \
 USER user
 WORKDIR "/project"
 
+# For some reason, yarn progress bar is screwed up.
+RUN yarn config set no-progress
+
 CMD ["emacs"]
